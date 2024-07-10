@@ -25,7 +25,7 @@ Este é um programa em Java que permite ao usuário converter valores entre dife
 
 1. **Clonar o Repositório**
 
-git clone https://github.com/seu_usuario/conversor-de-moedas.git
+- git clone [https://github.com/AdemirSilvaJunior/ConversorDeMoedas.git]
 
 
 2. **Importar o Projeto**
