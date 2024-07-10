@@ -1,54 +1,62 @@
 # Conversor de Moedas
 
-Este projeto é um conversor de moedas simples desenvolvido em Java que utiliza uma API para obter cotações em tempo real. O programa permite ao usuário escolher entre várias opções de conversão de moedas e calcular o valor convertido com base na taxa de câmbio atual.
+Este é um programa em Java que permite ao usuário converter valores entre diferentes moedas utilizando a API Extended Rate. O programa oferece diversas opções de conversão e exibe o resultado formatado de acordo com as especificações.
 
 ## Funcionalidades
 
-- Conversão de Dólar (USD) para Real (BRL)
-- Conversão de Real (BRL) para Dólar (USD)
-- Conversão de Euro (EUR) para Real (BRL)
-- Conversão de Real (BRL) para Euro (EUR)
-- Conversão de Libra Esterlina (GBP) para Real (BRL)
-- Conversão de Real (BRL) para Libra Esterlina (GBP)
+- Conversão entre seis diferentes pares de moedas:
+  - Dólar (USD) para Real (BRL)
+  - Real (BRL) para Dólar (USD)
+  - Euro (EUR) para Real (BRL)
+  - Real (BRL) para Euro (EUR)
+  - Libra Esterlina (GBP) para Real (BRL)
+  - Real (BRL) para Libra Esterlina (GBP)
+  
+- Utilização da API Extended Rate para obter taxas de conversão em tempo real.
 
-## Pré-requisitos
+## Configuração do Ambiente de Desenvolvimento
 
-- Java JDK 11 ou superior
-- IntelliJ IDEA ou outra IDE de sua escolha
-- Conta na [API Extended Rate](https://rapidapi.com/alpha-vantage-alpha-vantage-default/api/alpha-vantage/) para obter uma chave de API
+### Pré-requisitos
 
-## Como configurar e executar o projeto
+- JDK (Java Development Kit) instalado em sua máquina.
+- IDE de sua preferência (recomendado: IntelliJ IDEA).
 
-1. **Clone o repositório:**
-    ```bash
-    git clone https://github.com/SEU_USUARIO/ConversorDeMoedas.git
-    cd ConversorDeMoedas
-    ```
+### Instalação
 
-2. **Abra o projeto na sua IDE:**
-    - Abra o IntelliJ IDEA e selecione `File > Open`, então navegue até o diretório do projeto clonado.
+1. **Clonar o Repositório**
 
-3. **Configure a biblioteca GSON:**
-    - Baixe a biblioteca GSON a partir do [Maven Repository](https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.6) e adicione ao projeto.
+git clone https://github.com/seu_usuario/conversor-de-moedas.git
 
-4. **Obtenha sua chave de API:**
-    - Cadastre-se na [API Extended Rate](https://rapidapi.com/alpha-vantage-alpha-vantage-default/api/alpha-vantage/) e obtenha sua chave de API.
 
-5. **Atualize a chave de API no código:**
-    - Substitua `"SUA_API_KEY"` pela sua chave de API na classe `ConversorMoedas.java`.
+2. **Importar o Projeto**
 
-6. **Execute o programa:**
-    - Execute a classe `Main.java` para iniciar o conversor de moedas.
+- Abra o IntelliJ IDEA e selecione "Open" ou "Import" dependendo da opção disponível.
+- Navegue até o diretório onde o repositório foi clonado e selecione o arquivo `pom.xml` (projeto Maven) ou o diretório raiz do projeto.
 
-## Estrutura do Projeto
+### Configuração
 
-- `main` - Contém a classe principal que gerencia a interação com o usuário.
-- `service` - Contém a lógica de conversão de moedas e integração com a API.
-- `model` - Contém as classes de modelo usadas para desserializar a resposta da API.
+1. **Obter Chave da API**
 
-## Exemplo de Uso
+- Registre-se em [Extended Rate](https://v6.exchangerate-api.com) para obter sua chave de API.
 
-1. Ao executar o programa, você verá um menu com opções de conversão.
-2. Escolha a opção desejada digitando o número correspondente.
-3. Insira o valor que deseja converter.
-4. O programa exibirá o valor convertido com base na taxa de câmbio atual.
+2. **Configurar Chave da API**
+
+- Abra o arquivo `ConversorMoedas.java`.
+- Substitua a constante `API_KEY` pela sua chave de API obtida anteriormente.
+
+### Execução
+
+- Execute a classe `Main.java` para iniciar o programa.
+- Siga as instruções no console para escolher a opção de conversão e inserir o valor a ser convertido.
+
+### Exemplo de Uso
+
+1. Escolha uma opção de conversão, por exemplo, "1" para Dólar (USD) para Real (BRL).
+2. Insira o valor que deseja converter, por exemplo, "100".
+3. O programa exibirá o resultado formatado, por exemplo, "100 USD corresponde a 486 BRL com 65 centavos".
+
+## Outras Informações
+
+- Este projeto utiliza a biblioteca Gson para desserializar as respostas da API Extended Rate.
+- As taxas de conversão são obtidas em tempo real e podem variar conforme o mercado.
+- Para suporte ou sugestões, entre em contato pelo chat ou abra uma issue no GitHub.
